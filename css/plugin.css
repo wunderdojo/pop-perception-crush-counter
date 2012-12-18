@@ -1,0 +1,41 @@
+/* 
+    Document   : plugin.css
+    Created on : Dec 18, 2012, 11:55:20 AM
+    Author     : James
+*/
+
+.crush-button{
+  font-family: 'Pontano Sans', sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 5px;
+  text-decoration: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  text-shadow: 1px 1px 3px #666666;
+  border: solid #e3e3e3 2px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#F57131), to(#ce531a));
+  background: -moz-linear-gradient(top, #F57131, #ce531a);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#F57131, endColorStr=#ce531a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#F57131, endColorStr=#ce531a);
+  display:inline-block; /* for IE */
+}
+
+.crush-button:hover{
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#c75306), to(#eb834c));
+  background: -moz-linear-gradient(top, #c75306, #eb834c)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F57131, endColorstr=#ce531a);
+}
+
+.crush-button.guy{
+    margin-left:10px;
+}
+
+.crush-button.girl{
+    margin-left:10px;
+}
+
