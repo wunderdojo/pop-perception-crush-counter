@@ -7,7 +7,7 @@
 .crush-button{
   font-family: 'Pontano Sans', sans-serif;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 18px;
   padding: 5px;
   text-decoration: none;
   -webkit-border-radius: 6px;
@@ -27,15 +27,32 @@
 
 .crush-button:hover{
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#c75306), to(#eb834c));
-  background: -moz-linear-gradient(top, #c75306, #eb834c)
+  background: -moz-linear-gradient(top, #c75306, #eb834c);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F57131, endColorstr=#ce531a);
 }
 
+.crush-button.processing{
+   -webkit-box-shadow: 0px 0px 5px #0c9dd1;
+  -moz-box-shadow: 0px 0px 5px #0c9dd1;
+  box-shadow: 0px 0px 5px #0c9dd1;
+}
+
+table#crush{float:left;width:260px;margin-bottom:10px;}
+table#crush td{width:50%;}
+.crush-button.out{
+}
+
 .crush-button.guy{
-    margin-left:10px;
+  
 }
 
 .crush-button.girl{
-    margin-left:10px;
+
 }
 
+.heart{display:block;background: transparent url(../img/heart.png) no-repeat;width:11px;height:10px;background-position:center;float:right;margin-left:8px;} 
+
+.crush-counter{display:block;font-size:11px;font-family:Arial, sans-serif;}
+
+/* style for new meta section on the celebrity editing screen */
+input[name='gender']{margin: 0 3px 0 10px;}
