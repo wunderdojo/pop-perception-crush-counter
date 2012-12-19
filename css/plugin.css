@@ -31,7 +31,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F57131, endColorstr=#ce531a);
 }
 
-.crush-button.processing{
+.processing{
    -webkit-box-shadow: 0px 0px 5px #0c9dd1;
   -moz-box-shadow: 0px 0px 5px #0c9dd1;
   box-shadow: 0px 0px 5px #0c9dd1;

@@ -90,15 +90,14 @@ class crushCounter{
             $class='in';
             $user_id = get_current_user_id();
             $c = $this->checkCrush($post->ID, $user_id);
-            if($c==1){$crushed='heart';}elseif($c==2){$gcrushed='heart';}
             }
         else{
            $class = 'out';
            $disabled = 'disabled';
            $buttons .="<div class='warning'>Log in or register below to cast your crush!</div>";
         }
-        $buttons .= sprintf("<table id='crush'><tr><td><button %s type='button' class='crush-button %s' value='%d' rel='1'>Crush<span class='s %s'></span></button><div class='crush-counter'><span id='crush-count'><b>%d</b> %s</span></div></td>",$disabled, $class,$post->ID, $crushed, $count[1]['count'], $count[1]['term']);
-        $buttons .= sprintf("<td><button %s type='button' class='crush-button %s %s' value='%d' rel='2'>%s Crush<span class='s %s'></span></button><div class='crush-counter'><span id='gender-crush-count'><b>%d</b> %s</span></div></td></tr></table>",$disabled, $gender, $class, $post->ID, ucfirst($gender), $gcrushed, $count[2]['count'], $count[2]['term'] );
+        $buttons .= sprintf("<table id='crush'><tr><td><button %1s type='button' class='crush-button %2s' value='%3d' rel='1'>Crush</button><div class='crush-counter'><span id='crush-count'><b>%4d</b> %5s</span></div></td>",$disabled, $class,$post->ID, $count[1]['count'], $count[1]['term']);
+        $buttons .= sprintf("<td><button %1s type='button' class='crush-button %2s %3s' value='%4d' rel='2'>%5s Crush</button><div class='crush-counter'><span id='gender-crush-count'><b>%6d</b> %7s</span></div></td></tr></table>",$disabled, $gender, $class, $post->ID, ucfirst($gender), $count[2]['count'], $count[2]['term'] );
         return $buttons;
     }
     
