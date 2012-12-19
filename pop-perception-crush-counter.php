@@ -40,7 +40,7 @@ class crushCounter{
         add_action('save_post', array(&$this,'saveMetaData'),10,2); 
         /** Hooks for the ajax crush voting */
         add_action('wp_ajax_ajax-crush', array(&$this, 'ajaxCrush'));
-	add_action('wp_ajax_nopriv_ajax-crush', array(&$this, 'ajaxCrush'));
+		add_action('wp_ajax_nopriv_ajax-crush', array(&$this, 'ajaxCrush'));
         add_action('init', array(&$this, 'init'));
     }
     
