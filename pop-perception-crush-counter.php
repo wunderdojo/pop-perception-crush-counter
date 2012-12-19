@@ -140,7 +140,7 @@ class crushCounter{
         
     function getCrushCount($post_id){
         global $wpdb;
-        $query = "SELECT crush_type, COUNT(*) as count FROM {$wpdb->prefix}crushes GROUP BY crush_type";
+        $query = "SELECT crush_type, COUNT(*) as count FROM {$wpdb->prefix}crushes WHERE post_id = $post_id GROUP BY crush_type";
         $results = $wpdb->get_results($query);
         $count = array('1'=>array('count'=>0, 'term'=>'crushes'), '2'=>array('count'=>'0', 'term'=>'crushes'));
         if($results){
@@ -150,6 +150,13 @@ class crushCounter{
            } 
         return $count;
         }
+        
+     /** There are a couple of areas we we need to provide data to the PopPerception plugin */
+    public function totalCrushes($post_id){
+        $count = $this->getCrushCount($post_id);
+        $total = $count[1]['count'] + $count[2]['count'];
+        return $total;
+    }
 
     /** This function handles the front end ajax crush button actions */
     function ajaxCrush(){
