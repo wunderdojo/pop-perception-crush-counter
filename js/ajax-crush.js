@@ -19,6 +19,13 @@ $('.crush-button.in').click(function(e){
          $('#crush-count').html("<b>"+data[1]['count']+"</b> "+data[1]['term']);
          $('#gender-crush-count').html("<b>"+data[2]['count']+"</b> "+data[2]['term']);
          /* if they haven't voted before of they have and they're removing their vote, toggle the class */
+         if(data['c']==0 || data['c'] == $(e.target).attr('rel')){
+         $(e.target).next('.crush-counter').toggleClass('crushed');
+         }
+         /* otherwise they're switching their vote, need to toggle both classes */
+         else{
+         $('.crush-counter').toggleClass('crushed');
+             }  
          }
     }, 'json');
    });
